@@ -19,8 +19,9 @@ Solo debes ingresar los siguientes comandos :
 ```
     - git clone https://github.com/erickuu/api-movie.git
     - cd api-movie/
-    - composer install && composer update --ignore-plattform-reqs
+    - composer install && composer update
     - y por ultimo deberas ingresar una API KEY, desde tu cuenta en themoviedb.org.
+    - php artisan serve
 ```    
 <h3>Nota</h3>
 Cabe destacar que aunque sea tedioso seguir los pasos ya antes mencionado para la instalacion de proyecto, es algo necesario en caso de querer revisar el proyecto, esto debido a que requiere de un hosting y un dominio toda la app, sin embargo no se puede hostear con algun hosting gratuito ni nada parecido, por esto es necesario instalar desde cada maquina el repo. (Sorry).
