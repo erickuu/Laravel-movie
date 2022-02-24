@@ -48,7 +48,7 @@
 	</div>
 
 
-	@if(count($tvs['videos']['results']) > 0 )
+	@if(count($tvs['videos']['results']) > 1 )
 	<scroll-container>
 		<scroll-page id="trailer">
 			<div class="tv-cast bg-black">
@@ -65,6 +65,12 @@
 						<p class="text-white">{{ $tvs['videos']['results'][1]['name'] }}</p>
 					</div>
 				</div>
+				@else
+					
+					<div class="text-center">
+						<iframe width="600" height="400" src="https://www.youtube.com/embed/{{$tvs['videos']['results'][0]['key'] }}" title="{{ $tvs['videos']['results'][0]['name'] }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<p class="text-white">{{ $tvs['videos']['results'][0]['name'] }}</p>
+					</div>
 			</div>
 		</scroll-page>
 	</scroll-container>

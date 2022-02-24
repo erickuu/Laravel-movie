@@ -50,17 +50,17 @@
 		<scroll-page id="trailer">
 			<div class="movie-cast bg-black">
 				<div class="container flex justify-content-center align-items-center mx-auto px-4 py-16">
-					
+					@if($movies['videos']['results'][0]['key'])
 					<div class="text-center">
 						<iframe width="600" height="400" src="https://www.youtube.com/embed/{{$movies['videos']['results'][0]['key'] }}" title="{{ $movies['videos']['results'][0]['name'] }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						<p class="text-white">{{ $movies['videos']['results'][0]['name'] }}</p>
 					</div>
+						@else
+						<div class="text-center">
+							<p class="text-white text-lg">No found trailer, we sorry </p>
+						</div>
+					@endif
 
-
-					<div class="text-center">
-						<iframe width="600" height="400" src="https://www.youtube.com/embed/{{$movies['videos']['results'][1]['key'] }}" title="{{ $movies['videos']['results'][0]['name'] }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						<p class="text-white">{{ $movies['videos']['results'][1]['name'] }}</p>
-					</div>
 				</div>
 			</div>
 		</scroll-page>	

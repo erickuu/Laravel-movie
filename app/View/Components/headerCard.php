@@ -24,6 +24,7 @@ class headerCard extends Component
      */
     public function render()
     {
-        return view('components.header-card');
+        $randint = rand(1,9);
+        return view('components.header-card',['randint'=>$randint]);
     }
 }

@@ -2,8 +2,8 @@
 @section('content')	
 
 	@foreach($popularMovies as $movies) 
-	    @if($loop->index < 1)           
-	      <x-header-card :movies="$movies"/>
+	    @if($loop->index < 2)        
+	      <x-header-card :movies="$movies"/>   
 	    @endif
 	@endforeach
 	<section class="flex flex-col items-center justify-center w-screen h-screen text-black">
